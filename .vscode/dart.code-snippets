@@ -1,0 +1,137 @@
+{
+  "Flutter StatelessWidget": {
+    "prefix": "stless",
+    "body": [
+      "class ${1:WidgetName} extends StatelessWidget {",
+      "  const ${1:WidgetName}({super.key});",
+      "",
+      "  @override",
+      "  Widget build(BuildContext context) {",
+      "    return ${2:Container()};",
+      "  }",
+      "}"
+    ],
+    "description": "Create a Flutter StatelessWidget"
+  },
+  "Flutter StatefulWidget": {
+    "prefix": "stful",
+    "body": [
+      "class ${1:WidgetName} extends StatefulWidget {",
+      "  const ${1:WidgetName}({super.key});",
+      "",
+      "  @override",
+      "  State<${1:WidgetName}> createState() => _${1:WidgetName}State();",
+      "}",
+      "",
+      "class _${1:WidgetName}State extends State<${1:WidgetName}> {",
+      "  @override",
+      "  Widget build(BuildContext context) {",
+      "    return ${2:Container()};",
+      "  }",
+      "}"
+    ],
+    "description": "Create a Flutter StatefulWidget"
+  },
+  "Flutter Scaffold": {
+    "prefix": "scaffold",
+    "body": [
+      "Scaffold(",
+      "  appBar: AppBar(",
+      "    title: const Text('${1:Title}'),",
+      "  ),",
+      "  body: ${2:Center(child: const Text('${3:Content}'))},",
+      ");"
+    ],
+    "description": "Create a basic Scaffold"
+  },
+  "Flutter MaterialApp": {
+    "prefix": "materialapp",
+    "body": [
+      "MaterialApp(",
+      "  title: '${1:App Title}',",
+      "  home: ${2:Scaffold()},",
+      ");"
+    ],
+    "description": "Create a MaterialApp"
+  },
+  "Flutter Column": {
+    "prefix": "col",
+    "body": [
+      "Column(",
+      "  children: [",
+      "    ${1:Text('Hello')},",
+      "  ],",
+      ");"
+    ],
+    "description": "Create a Column widget"
+  },
+  "Flutter Row": {
+    "prefix": "row",
+    "body": [
+      "Row(",
+      "  children: [",
+      "    ${1:Text('Hello')},",
+      "  ],",
+      ");"
+    ],
+    "description": "Create a Row widget"
+  },
+  "Flutter AlertDialog": {
+    "prefix": "alertdialog",
+    "body": [
+      "showDialog(",
+      "  context: context,",
+      "  builder: (context) => AlertDialog(",
+      "    title: const Text('${1:Title}'),",
+      "    content: const Text('${2:Message}'),",
+      "    actions: [",
+      "      TextButton(",
+      "        onPressed: () => Navigator.of(context).pop(),",
+      "        child: const Text('OK'),",
+      "      ),",
+      "    ],",
+      "  ),",
+      ");"
+    ],
+    "description": "Create a basic AlertDialog"
+  },
+  "Flutter SnackBar": {
+    "prefix": "snackbar",
+    "body": [
+      "ScaffoldMessenger.of(context).showSnackBar(",
+      "  SnackBar(content: Text('${1:Message}')),",
+      ");"
+    ],
+    "description": "Show a SnackBar"
+  },
+  "Flutter build method": {
+    "prefix": "build",
+    "body": [
+      "@override",
+      "Widget build(BuildContext context) {",
+      "  return ${1:Container()};",
+      "}"
+    ],
+    "description": "Create a build method"
+  }, 	"A new Flutter Screen with a Scaffold": {
+		"prefix": "fl-screen",
+		"body": [
+			"import 'package:flutter/material.dart';",
+			"",
+			"class ${1:Home}Screen extends StatelessWidget {",
+			"   ",
+			"  const ${1:Home}Screen({Key? key}) : super(key: key);",
+			"  ",
+			"  @override",
+			"  Widget build(BuildContext context) {",
+			"    return const Scaffold(",
+			"      body: Center(",
+			"         child: Text('${1:Home}Screen'),",
+			"      ),",
+			"    );",
+			"  }",
+			"}"			
+		],
+		"description": "Crea una pantalla con un Scaffold"
+	}
+}
